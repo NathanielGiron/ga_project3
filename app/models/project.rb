@@ -11,7 +11,7 @@ class Project < ActiveRecord::Base
   end
 
   def self.by_plan_and_tenant(tenant_id)
-  	tenant = Tenant.find(tenant)
+  	tenant = Tenant.find(tenant_id)
   	if tenant.plan == "premium"
   		tenant.projects
   	else
