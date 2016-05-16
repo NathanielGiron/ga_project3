@@ -1,0 +1,5 @@
+<h1> Known Messages </h1>
+
+<% @messages.each do |message| %>
+  <h2> <%= message.user.email %> : <a href="/messages/<%= message.id %>"><%= message.message %></a></h2>
+<% end %>
