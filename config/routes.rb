@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'video' => 'video#index'
+
   resources :artifacts
 	resources :tenants do
   	resources :projects
