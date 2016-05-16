@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   
+  get 'messages/new'
+
+  get 'messages/create'
+
+  get 'messages/show'
+
+  get 'messages/edit'
+
+  get 'messages/destroy'
+
   get 'video/index'
 
   resources :artifacts
