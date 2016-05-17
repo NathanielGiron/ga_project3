@@ -11,9 +11,12 @@ Rails.application.routes.draw do
   resources :members
   get 'home/index'
 
-   root :to => "home#index"
+  root :to => "home#index"
 
   get '/test' => 'messages#test'
+  
+  post 'pusher/auth'
+
     
   # *MUST* come *BEFORE* devise's definitions (below)
   as :user do   
