@@ -1,14 +1,4 @@
 Rails.application.routes.draw do
-  
-  get 'messages/new'
-
-  get 'messages/create'
-
-  get 'messages/show'
-
-  get 'messages/edit'
-
-  get 'messages/destroy'
 
   get 'video/index'
 
@@ -23,6 +13,7 @@ Rails.application.routes.draw do
 
    root :to => "home#index"
 
+  get '/test' => 'messages#test'
     
   # *MUST* come *BEFORE* devise's definitions (below)
   as :user do   
