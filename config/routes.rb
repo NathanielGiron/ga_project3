@@ -6,8 +6,7 @@ Rails.application.routes.draw do
 
   get '/test' => 'messages#show'
 
-  get '/send' => 'messages#test'
-
+  get 'messaging' => 'messaging#send_message'
 
   resources :artifacts
 	resources :tenants do
