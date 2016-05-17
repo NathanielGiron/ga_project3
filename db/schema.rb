@@ -11,11 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20160517221424) do
+=======
 ActiveRecord::Schema.define(version: 20160515080928) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
+  create_table "artifacts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "key"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "artifacts", ["project_id"], name: "index_artifacts_on_project_id", using: :btree
+
+  create_table "chats", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "conversation_id"
+    t.integer  "user_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "chats", ["conversation_id"], name: "index_chats_on_conversation_id", using: :btree
+  add_index "chats", ["user_id"], name: "index_chats_on_user_id", using: :btree
+
+  create_table "conversations", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+=======
+>>>>>>> master
   create_table "members", force: :cascade do |t|
     t.integer  "tenant_id"
     t.integer  "user_id"
@@ -27,6 +62,15 @@ ActiveRecord::Schema.define(version: 20160515080928) do
 
   add_index "members", ["tenant_id"], name: "index_members_on_tenant_id", using: :btree
   add_index "members", ["user_id"], name: "index_members_on_user_id", using: :btree
+
+  create_table "messages", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
@@ -48,6 +92,18 @@ ActiveRecord::Schema.define(version: 20160515080928) do
 
   add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true, using: :btree
   add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
+
+  create_table "tasks", force: :cascade do |t|
+    t.string   "title"
+    t.string   "status"
+    t.integer  "project_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "tasks", ["project_id"], name: "index_tasks_on_project_id", using: :btree
+  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id", using: :btree
 
   create_table "tenants", force: :cascade do |t|
     t.integer  "tenant_id"
@@ -92,8 +148,17 @@ ActiveRecord::Schema.define(version: 20160515080928) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+<<<<<<< HEAD
+  add_foreign_key "artifacts", "projects"
+  add_foreign_key "chats", "conversations"
+  add_foreign_key "chats", "users"
+=======
+>>>>>>> master
   add_foreign_key "members", "tenants"
   add_foreign_key "members", "users"
+  add_foreign_key "messages", "users"
   add_foreign_key "projects", "tenants"
+  add_foreign_key "tasks", "projects"
+  add_foreign_key "tasks", "users"
   add_foreign_key "tenants", "tenants"
 end

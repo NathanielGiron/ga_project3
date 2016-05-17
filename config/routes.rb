@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root :to => "home#index"
 
+  get 'tasks' => 'tasks#index'
+
   get 'video/index'
 
   get 'video' => 'video#index'  
