@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160517221424) do
+=======
+ActiveRecord::Schema.define(version: 20160515080928) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "artifacts", force: :cascade do |t|
     t.string   "name"
     t.string   "key"
@@ -44,6 +49,8 @@ ActiveRecord::Schema.define(version: 20160517221424) do
     t.datetime "updated_at",   null: false
   end
 
+=======
+>>>>>>> master
   create_table "members", force: :cascade do |t|
     t.integer  "tenant_id"
     t.integer  "user_id"
@@ -141,9 +148,12 @@ ActiveRecord::Schema.define(version: 20160517221424) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+<<<<<<< HEAD
   add_foreign_key "artifacts", "projects"
   add_foreign_key "chats", "conversations"
   add_foreign_key "chats", "users"
+=======
+>>>>>>> master
   add_foreign_key "members", "tenants"
   add_foreign_key "members", "users"
   add_foreign_key "messages", "users"

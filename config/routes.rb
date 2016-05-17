@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
+  root :to => "home#index"
 
   get 'tasks' => 'tasks#index'
 
   get 'video/index'
 
-  get 'video' => 'video#index'
-
-  get '/test' => 'messages#show'
-
-  get '/send' => 'messages#test'
-
+  get 'video' => 'video#index'  
 
   resources :artifacts
 	resources :tenants do
@@ -18,10 +14,8 @@ Rails.application.routes.draw do
   resources :members
   get 'home/index'
 
-  root :to => "home#index"
 
-  
-    
+
   # *MUST* come *BEFORE* devise's definitions (below)
   as :user do   
     match '/user/confirmation' => 'confirmations#update', :via => :put, :as => :update_user_confirmation
@@ -33,9 +27,6 @@ Rails.application.routes.draw do
     :sessions => "milia/sessions", 
     :passwords => "milia/passwords", 
   }
-
-  resources :messages
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
