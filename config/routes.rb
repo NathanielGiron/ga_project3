@@ -3,11 +3,7 @@ Rails.application.routes.draw do
 
   get 'video/index'
 
-  get 'video' => 'video#index'
-
-  get '/test' => 'messages#show'
-
-  get 'messaging' => 'messaging#send_message'
+  get 'video' => 'video#index'  
 
   resources :artifacts
 	resources :tenants do
