@@ -101,6 +101,7 @@ GEM
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     http_parser.rb (0.6.0)
+    httpclient (2.8.0)
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -136,6 +137,11 @@ GEM
     pg (0.18.4)
     private_pub (1.0.3)
       faye
+    pusher (0.18.0)
+      httpclient (~> 2.7)
+      multi_json (~> 1.0)
+      pusher-signature (~> 0.1.8)
+    pusher-signature (0.1.8)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -235,6 +241,7 @@ DEPENDENCIES
   milia
   pg (~> 0.15)
   private_pub
+  pusher
   rails (= 4.2.6)
   rails_12factor
   recaptcha
