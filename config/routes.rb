@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get '/test' => "messages#test"
-
   get 'video/index'
 
   get 'video' => 'video#index'
@@ -17,7 +15,11 @@ Rails.application.routes.draw do
   resources :members
   get 'home/index'
 
-   root :to => "home#index"
+  root :to => "home#index"
+
+  get '/test' => 'messages#test'
+  
+  post 'pusher/auth'
 
     
   # *MUST* come *BEFORE* devise's definitions (below)

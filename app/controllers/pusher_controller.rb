@@ -13,6 +13,7 @@ class PusherController < ApplicationController
       render json: response
     else
       render text: 'Not authorized', status: '403'
+
     end
   end
 end
