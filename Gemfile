@@ -27,10 +27,6 @@ gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-datepicker-rails'
 
-#chat gemfiles
-gem 'private_pub'
-gem 'thin'
-
 #additional gems
 gem "puma"
 
