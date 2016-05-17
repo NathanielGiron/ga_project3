@@ -4,9 +4,6 @@ Rails.application.routes.draw do
 
   get 'video' => 'video#index'
 
-  # bryce's pusher variables
-  post '/pusher/auth' => 'pusher#auth'
-
   get '/test' => 'messages#show'
 
   get '/send' => 'messages#test'
