@@ -1,6 +1,10 @@
 class Project < ActiveRecord::Base
   belongs_to :tenant
 
+  #project has many users through tasks
+  has_many :tasks
+  has_many :users, through: :tasks
+
   validates_uniqueness_of :title
   has_many :artifacts, dependent: :destroy
   validate :free_plan_can_only_have_one_project
