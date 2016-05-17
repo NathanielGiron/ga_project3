@@ -13,7 +13,7 @@
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
     //gets the call id from p2p peerJS web server set up on heroku
-    var peer = new Peer({host:'p2ppeerjs.herokuapp.com', port: 443, key: 'peerjs', secure: true});
+    var peer = new Peer({host:'https://p2ppeerjs.herokuapp.com', port: 443, key: 'peerjs', secure: true});
 
     peer.on('open', function(){
       $('#my-id').text(peer.id);
