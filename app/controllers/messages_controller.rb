@@ -1,12 +1,7 @@
 class MessagesController < ApplicationController
-
-
-
   def index
     @messages = Message.all
     @users = User.all
-    # Pusher['private-'+params[:message][:recipient_id]].trigger('new_message', {:from => current_user.email, :subject => message.subject})
-
 
     respond_to do |format|
       format.html
@@ -17,9 +12,7 @@ class MessagesController < ApplicationController
   def create
     @user = User.all
     message = Message.create params_model
-    json  = model.to_json
     redirect_to message_path message
-    Pusher[channel].trigger 'messages/create', json
   end
 
   def new
