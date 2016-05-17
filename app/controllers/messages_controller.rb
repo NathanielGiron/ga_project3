@@ -1,7 +1,12 @@
 class MessagesController < ApplicationController
+
+
+
   def index
     @messages = Message.all
     @users = User.all
+    # Pusher['private-'+params[:message][:recipient_id]].trigger('new_message', {:from => current_user.email, :subject => message.subject})
+
 
     respond_to do |format|
       format.html
@@ -23,6 +28,7 @@ class MessagesController < ApplicationController
 
   def show 
     @message = Message.find params[:id]
+
   end
 
   def edit

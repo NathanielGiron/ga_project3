@@ -1,18 +1,13 @@
-<head>
-  <title>Pusher Test</title>
-  <script src="https://js.pusher.com/3.1/pusher.min.js"></script>
-  <script>
 
-    // Enable pusher logging - don't include this in production
-    Pusher.logToConsole = true;
+<h2><%= @user.email %>'s message page</h2>
 
-    var pusher = new Pusher('a26a43a4d594161cec60', {
-      encrypted: true
-    });
-
-    var channel = pusher.subscribe('test_channel');
-    channel.bind('my_event', function(data) {
-      alert(data.message);
-    });
-  </script>
-</head>
+<% form_for Message.new do |f| %>
+  <%= f.hidden_field :recipient_id, :value => @user.id %>
+  <div>
+    <label for="message_body">Message</label>
+    <%= f.text_area :body %>
+  </div>
+  <div>
+    <%= f.submit 'Send a message' %>
+  </div>
+<% end %>

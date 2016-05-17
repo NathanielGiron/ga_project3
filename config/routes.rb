@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   # bryce's pusher variables
   post '/pusher/auth' => 'pusher#auth'
 
+  get '/test' => 'messages#show'
+
+  get '/send' => 'messages#test'
+
 
   resources :artifacts
 	resources :tenants do
@@ -17,10 +21,7 @@ Rails.application.routes.draw do
 
   root :to => "home#index"
 
-  get '/test' => 'messages#test'
   
-  post 'pusher/auth'
-
     
   # *MUST* come *BEFORE* devise's definitions (below)
   as :user do   
