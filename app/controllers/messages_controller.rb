@@ -2,6 +2,11 @@ class MessagesController < ApplicationController
   def index
     @messages = Message.all
     @users = User.all
+
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create
@@ -31,6 +36,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:user).permit (:message)
+    params.require(:user).permit (:body)
   end
 end
