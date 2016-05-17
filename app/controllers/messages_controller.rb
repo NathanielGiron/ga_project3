@@ -11,8 +11,10 @@ class MessagesController < ApplicationController
 
   def create
     @user = User.all
-    message = Message.create message_params
+    message = Message.create params_model
+    json  = model.to_json
     redirect_to message_path message
+    Pusher[channel].trigger 'messages/create', json
   end
 
   def new
@@ -35,7 +37,7 @@ class MessagesController < ApplicationController
 
   private
 
-  def message_params
-    params.require(:user).permit (:body)
+  def params_model
+    params.require(:message).permit(:id,:body,:user_id)
   end
 end

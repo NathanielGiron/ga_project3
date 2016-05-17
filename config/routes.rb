@@ -1,18 +1,14 @@
 Rails.application.routes.draw do
-  
-  get 'messages/new'
 
-  get 'messages/create'
-
-  get 'messages/show'
-
-  get 'messages/edit'
-
-  get 'messages/destroy'
+  get '/test' => "messages#test"
 
   get 'video/index'
 
   get 'video' => 'video#index'
+
+  # bryce's pusher variables
+  post '/pusher/auth' => 'pusher#auth'
+
 
   resources :artifacts
 	resources :tenants do
