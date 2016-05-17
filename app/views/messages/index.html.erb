@@ -9,23 +9,3 @@
 <% end %>
 
 <%= link_to 'New Message', new_message_path, remote: true %>
-
-
-<head>
-  <title>Pusher Test</title>
-  <script src="https://js.pusher.com/3.1/pusher.min.js"></script>
-  <script>
-
-    // Enable pusher logging - don't include this in production
-    Pusher.logToConsole = true;
-
-    var pusher = new Pusher('a26a43a4d594161cec60', {
-      encrypted: true
-    });
-
-    var channel = pusher.subscribe('test_channel');
-    channel.bind('my_event', function(data) {
-      alert(data.message);
-    });
-  </script>
-</head>
