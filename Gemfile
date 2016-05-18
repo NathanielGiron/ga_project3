@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'bootstrap_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
@@ -27,8 +27,10 @@ gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-datepicker-rails'
 
-#additional gems
-gem "puma"
+#chat gems
+gem "private_pub"
+gem "faye"
+gem "thin"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
