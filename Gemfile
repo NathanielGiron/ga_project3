@@ -29,6 +29,8 @@ gem 'bootstrap-datepicker-rails'
 
 #chat gems
 gem "private_pub"
+gem "faye"
+gem "thin"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
