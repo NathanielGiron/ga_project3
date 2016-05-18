@@ -9,7 +9,7 @@
     <th>Status</th>
     <th>Modify</th>
   </tr>
-<% @tasks.sort_by{ |t| [t.project.title, t.title, t.status] }.each do |task| %>
+<% @tasks.sort_by{ |t| [t.project.title, t.status, t.title] }.each do |task| %>
   <tr>
     <td><%= task.title %></td>
     <td><%= task.user.email %></td>		
