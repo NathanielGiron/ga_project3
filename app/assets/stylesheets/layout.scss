@@ -1,5 +1,54 @@
 
+body {
+
+  background: rgba(51, 204, 255, 0); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(bottom,rgba(51, 204, 255, .1),rgba(51, 204, 255, 1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(bottom,rgba(51, 204, 255, .1),rgba(51, 204, 255, 1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(bottom,rgba(51, 204, 255, .1),rgba(51, 204, 255, 1)); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom, rgba(51, 204, 255, .1), rgba(51, 204, 255, 1)); /*Standard*/
+
+}
+
 .navbar-default {
     background-color: #82dcfa;
     border-color: #E7E7E7;
+}
+
+.shark {
+  margin: 5%;
+}
+
+.offer {
+  margin-bottom: 5%;
+}
+
+li {
+  font-size: 15px;
+  padding: 3%;
+}
+
+#debug {
+  border: 1px solid black;
+}
+
+.price-title {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.price {
+  border: 1px solid black;
+  background-color: grey;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin: 5%;
+}
+
+.join-modal {
+  margin: 5%;
+  text-align: right;
+}
+
+footer {
+  text-align: center;
 }
