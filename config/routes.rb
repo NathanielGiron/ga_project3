@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root :to => "home#index"
 
   get 'tasks' => 'tasks#index'
+  get 'tasks/unique' => 'tasks#unique'
   post "tasks" => "tasks#create"
   put "/tasks/edit" => 'tasks#update'
 

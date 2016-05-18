@@ -1,5 +1,5 @@
-<h1>Tasks</h1>
-<%= link_to 'My tasks', tasks_unique_path %>
+<h1>My Tasks</h1>
+<%= link_to 'All Tasks', tasks_path %>
 
 <table>
   <tr>
@@ -10,6 +10,7 @@
     <th>Modify</th>
   </tr>
 <% @tasks.sort_by{ |t| [t.project.title, t.status, t.title] }.each do |task| %>
+	<% if current_user.email == task.user.email %>
   <tr>
     <td><%= task.title %></td>
     <td><%= task.user.email %></td>		
@@ -20,6 +21,8 @@
     	<%= link_to 'Delete', task, method: :delete %>
     </td>
   </tr>
+	  <% else %>
+	  <% end %>
   <% end %>
 </table>
 <br><br>
