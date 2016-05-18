@@ -33,3 +33,6 @@ module SaasProjectApp
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
+config.assest.precompile += ['messages/create.js']
+
