@@ -6,6 +6,8 @@
     <p><%= task.status %></p>
     <p><%= task.user.email %></p>
     <p><%= task.project.title %></p>
+    <%= link_to 'Edit', edit_task_path(task) %>
+    <%= link_to 'Delete', task, method: :delete %>
 <% end %>
 
-<%= render 'tasks/create' %>
+<%= render 'tasks/create' %>r

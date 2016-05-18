@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   get 'tasks' => 'tasks#index'
   post "tasks" => "tasks#create"
+  put "/tasks/edit" => 'tasks#update'
+
+  resources :tasks
 
   get 'video' => 'video#index' 
 
