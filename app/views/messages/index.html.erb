@@ -11,3 +11,7 @@
 <% end %>
 
 <%= subscribe_to "/messages/new" %>
+
+<script>
+    render partial: 'messages/create', message: @message
+</script>
