@@ -27,8 +27,10 @@ gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-datepicker-rails'
 
-#additional gems
-gem "puma"
+#chat gems
+gem "private_pub"
+gem "faye"
+gem "thin"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
