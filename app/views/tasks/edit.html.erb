@@ -3,13 +3,12 @@
  -->
 <%= bootstrap_form_for @task do |f| %>
   <%= f.text_field :title %>
+  <div class="field">
+      <%= f.select :user_id, User.all.collect { |p| [ p.email, p.id ] } %>
+  </div>
+  <div class="field">
+      <%= f.select :project_id, Project.all.collect { |p| [ p.title, p.id ] } %>
+  </div>
   <%= f.text_field :status %>
-  <div class="field">
-        <%= f.select :project_id, Project.all.collect { |p| [ p.title, p.id ] } %>
-  </div>
-  <div class="field">
-        <%= f.select :user_id, User.all.collect { |p| [ p.email, p.id ] } %>
-  </div>
-
   <%= f.primary %>
 <% end %>
