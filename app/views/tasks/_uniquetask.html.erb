@@ -1,5 +1,5 @@
-<h1>My Tasks</h1>
 <%= link_to 'All Tasks', tasks_path %>
+<h1>My Tasks</h1>
 
 <table>
   <tr>
@@ -9,7 +9,7 @@
     <th>Status</th>
     <th>Modify</th>
   </tr>
-<% @tasks.sort_by{ |t| [t.project.title, t.status, t.title] }.each do |task| %>
+<% @tasks.sort_by{ |t| [t.status, t.project.title, t.title] }.each do |task| %>
 	<% if current_user.email == task.user.email %>
   <tr>
     <td><%= task.title %></td>
