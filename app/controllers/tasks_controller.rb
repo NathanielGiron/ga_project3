@@ -33,6 +33,11 @@ class TasksController < ApplicationController
     Task.find(params[:id]).delete
     redirect_to tasks_path
   end
+
+  def unique
+    @tasks = Task.all
+    @task = Task.new
+  end
  	  private
 
   def task_params
