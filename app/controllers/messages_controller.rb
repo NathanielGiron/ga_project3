@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   def index
     @messages = Message.all
+    @users = User.all
   end
 
   def create
@@ -12,6 +13,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:body)
+    params.require(:message).permit(:body, :user_id)
   end
 end
