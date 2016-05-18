@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(version: 20160518013053) do
 
   add_index "artifacts", ["project_id"], name: "index_artifacts_on_project_id", using: :btree
 
+  create_table "conversations", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "members", force: :cascade do |t|
     t.integer  "tenant_id"
     t.integer  "user_id"
@@ -41,8 +48,8 @@ ActiveRecord::Schema.define(version: 20160518013053) do
   create_table "messages", force: :cascade do |t|
     t.text     "body"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
