@@ -43,6 +43,7 @@
 <p>Eunice:</p>
 <ul>
   <li>Set up basic video chat</li>
+  <li>Set up tasks</li>
 </ul>
 
 <h4>User Stories</h4>
