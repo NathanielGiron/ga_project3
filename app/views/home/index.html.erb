@@ -14,7 +14,7 @@
         <li>Assignment allocation services</li>
       </ul>
     </div>
-    <div class="col-md-offset-1 col-md-5" >
+    <div class="col-md-offset-1 col-md-4" >
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -67,7 +67,7 @@
         <li>Centralized group chat</li>
         <li>3 projects</li>
       </ul>
-      <button type="button" class="btn btn-info btn-md join-modal" data-toggle="modal" data-target="#freeModal">Start Free Trial</button>
+      <%= link_to 'start FREE trial', new_user_registration_path(plan: 'free'), class: 'btn btn-info btn-md'  %>
     </div>
     <div class="col-md-4 price">
       <h3 class="price-title">6.99/Month</h3>
@@ -76,102 +76,9 @@
         <li>1:1 text and video chat</li>
         <li>Ulimited projects</li>
       </ul>
-      <button type="button" class="btn btn-info btn-md join-modal" data-toggle="modal" data-target="#paidModal">Start Premium Membership</button>
+      <%= link_to 'Create a premium account', new_user_registration_path(plan: 'premium'), class: 'btn btn-info btn-md'  %>
     </div>
   </section>
-</div>
-
-<!-- Free Modal -->
-<div id="freeModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- free Modal content and form-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Create Free Membership</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Username">
-          <br>
-          <input type="text" placeholder="Last Name">
-          <br>
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Verify Email">
-          <br>
-          <input type="text" placeholder="Password">
-          <input type="text" placeholder="Verify Password">
-          <br>
-          <input type="submit" value="Create Account">
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- Paid Modal -->
-<div id="paidModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Paid Modal content and form-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Create Premium Membership</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Username">
-          <br>
-          <input type="text" placeholder="Last Name">
-          <br>
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Verify Email">
-          <br>
-          <input type="text" placeholder="Password">
-          <input type="text" placeholder="Verify Password">
-          <br>
-          <input type="submit" value="Create Account">
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-info btn-md join-modal" data-toggle="modal" data-target="#paidModal-Credit">Next</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-<!-- This might not work -->
-<!-- Credit Card Information -->
-<div id="paidModal-Credit" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Credit Info Form-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Enter Payment Information</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-          <input type="text" name="" value="did this work?">
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-info btn-md join-modal" data-toggle="modal" data-target="#paidModal-Credit">Finish</button>
-      </div>
-    </div>
-
-  </div>
 </div>
 
 
