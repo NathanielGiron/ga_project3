@@ -11,11 +11,3 @@
 <% end %>
 
 <%= subscribe_to "/messages/new" %>
-
-<script type="text/javascript">
-  <% publish_to "/messages/new" do %>
-    console.log('heroku\'s a brat');
-    $("#chat").append("<%= j render(@message) %>");
-    $("#new_message")[0].reset();
-  <% end %>
-</script>
