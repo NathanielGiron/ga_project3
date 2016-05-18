@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   root :to => "home#index"
 
   get 'tasks' => 'tasks#index'
+  post "tasks" => "tasks#create"
 
-  get 'video' => 'video#index'  
+  get 'video' => 'video#index' 
 
   resources :artifacts
 	resources :tenants do
