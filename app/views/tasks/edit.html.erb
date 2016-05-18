@@ -5,10 +5,10 @@
   <%= f.text_field :title %>
   <%= f.text_field :status %>
   <div class="field">
-      <%= f.select :user_id, User.all.collect { |p| [ p.email, p.id ] } %>
+      <%= f.select :user_id, User.all.sort.collect { |p| [ p.email, p.id ] } %>
   </div>
   <div class="field">
-      <%= f.select :project_id, Project.all.collect { |p| [ p.title, p.id ] } %>
+      <%= f.select :project_id, Project.all.sort.collect { |p| [ p.title, p.id ] } %>
   </div>
   <%= f.primary %>
 <% end %>
