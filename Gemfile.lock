@@ -53,6 +53,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-datepicker-rails (1.6.0.1)
       railties (>= 3.0)
+    bootstrap_form (2.3.0)
     builder (3.2.2)
     byebug (9.0.1)
     coffee-rails (4.1.1)
@@ -194,6 +195,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-session_store!
   bootstrap-datepicker-rails
+  bootstrap_form
   byebug
   coffee-rails (~> 4.1.0)
   devise

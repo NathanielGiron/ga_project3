@@ -3,8 +3,6 @@ Rails.application.routes.draw do
 
   get 'tasks' => 'tasks#index'
 
-  get 'video/index'
-
   get 'video' => 'video#index'  
 
   resources :artifacts
