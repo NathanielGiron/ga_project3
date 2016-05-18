@@ -2,6 +2,5 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-
-$("#chat").append("<%= j render(@message) %>");
-$("#new_message")[0].reset();
+PrivatePub.subscribe "/messages/new", (data, channel) ->
+  console.log(data.message.content)
