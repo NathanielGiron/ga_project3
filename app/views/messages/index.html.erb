@@ -12,4 +12,9 @@
 
 <%= subscribe_to "/messages/new" %>
 
-<%= javascript_include_tag "create.js" %>
+<% publish_to "/messages/new" do %>
+  <script type="text/javascript">
+    $("#chat").append("<%= j render(@message) %>");
+    $("#new_message")[0].reset();
+  </script>
+<% end %>
