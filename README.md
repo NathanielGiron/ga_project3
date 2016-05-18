@@ -2,7 +2,7 @@
 
 <h2>Project Ideas</h2>
 
-<p>A github mashed up with Slack & a kanban board. Connectiviity and productivity that makes each of the different websites we used for this project available from one easy source.</p>
+<p>A github mashed up with Slack & a ballin' to do list. Connectiviity and productivity that makes each of the different websites we used for this project available from one easy source.</p>
 
 <h4>//MVP</h4>
 <p>Create Project</p>
@@ -23,7 +23,6 @@
 <p>Javascript</p>
 <p>JQuery</p>
 <p>Amazon S3</p>
-<p>Socket.io</p>
 <p>WebRTC</p>
 <p>PeerJS</p>
 <p>I18n</p>
@@ -31,7 +30,8 @@
 <p>//Gems: Devise</p>
 
 <p>//Front End Design Tools</p>
-
+<p>Sketch</p>
+<p>Bootstrap</p>
 
 <h4>Team Layout</h4>
 <p>//Jacob git/repo master and front end</p>
@@ -40,7 +40,6 @@
 <p>//Nat full stack</p>
 
 <h4>Timeline</h4>
-<p>Bryce: Research Group Chat</p>
 <p>Eunice:</p>
 <ul>
   <li>Set up basic video chat</li>

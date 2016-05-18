@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
   def create
     puts 'creating a message...'
     @message = Message.create message_params
-    PrivatePub.publish_to("/messages/new", "alert('#{@message.body}');")
+    PrivatePub.publish_to("/messages/new", "console.log('');")
   end
 
   private
