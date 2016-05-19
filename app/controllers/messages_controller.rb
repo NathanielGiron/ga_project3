@@ -5,9 +5,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    puts "first"
     @message = Message.create message_params
-    PrivatePub.publish_to "/messages/new", :message => @message
   end
 
   private
