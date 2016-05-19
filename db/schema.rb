@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 20160518235032) do
 
   add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
 
->>>>>>> master
   create_table "payments", force: :cascade do |t|
     t.string   "email"
     t.string   "token"
