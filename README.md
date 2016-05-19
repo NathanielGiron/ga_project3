@@ -56,22 +56,13 @@
 <p>A smart, creative leader who wants to be able to quickly delegate tasks. They log in to our page, create a new organization, and invite their users. Through the connectivity of video chat plus being able to delegate tasks more quickly, the project is completed in time.</p>
 
 <h5>Worker</h5>
-<p>  </p>
+<p> A member of PM's team who wants to be kept up to date. They access their tasks easily, start a video chat to solve code after using the group chat, and are able to finish all tasks on time. </p>
 
 <h5>Student</h5>
-<p>A group of students working on a project need to assign roles.</p>
+<p>A group of students working on a project need to assign roles. Although less formal than a work group, they're able to work from home and still stay on track thanks to the tasks list and they can also look at different projects should they need to.</p>
 
-<h5>Client</h5>
-<p></p>
-
-<h5>Worker</h5>
+<h5>In Class Project</h5>
+<p> Bryce, Eunice, Jacob and Nat are all in a class together. When it comes time, they are assigned to work together on a group project. They are able to begin utilizing the tasks they've created while creating their own app. </p>
 
 
-
-Added upstream
-fixed merged
->> Request a pull request to Nat's branch
-he accepts new request
-Jacob / Eunice set remote upstream
-pull upstream
-
+<a href="https://docs.google.com/document/d/1K7dgSbUC_kCt4RKOonLzW-A1x-cXAEcNwFTqgonbl90/edit" alt="read more">ReadMore here</a>
