@@ -13,4 +13,7 @@ class User < ActiveRecord::Base
   	is_admin
   end
 
+  #users can have many projects, through their assigned tasks
+  has_many :tasks
+  has_many :projects, through: :tasks
 end
