@@ -1,8 +1,8 @@
 
 
 .navbar-default {
-    background-color: #82dcfa;
-    border-color: #E7E7E7;
+  background-color: #82dcfa;
+  border-color: #E7E7E7;
 }
 
 .shark {
@@ -56,3 +56,15 @@ footer {
   margin-bottom: 15%;
   margin-top: 15%;
 }
+
+.jumbotron {
+    position: relative;
+    background: #000 url('greenDesk.jpeg') center center;
+    width: 130%;
+    height: 120%;
+    background-size: cover;
+    overflow: auto;
+    margin-top: -21px;
+    margin-left: -15%;
+}
+
