@@ -10,9 +10,7 @@
   <%= f.submit "Send", :class => 'submit btn btn-default' %>
 <% end %>
 
-<% content_for :bottom do  %>
-  <%= subscribe_to "/messages/new" %>
-<% end %>
+<%= subscribe_to "/messages/new" %>
 
 <% content_for :scripts do %>
   <%= javascript_include_tag :messages %>
