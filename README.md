@@ -59,3 +59,12 @@
 
 <h5>Client</h5>
 <p></p>
+
+
+Added upstream
+fixed merged
+>> Request a pull request to Nat's branch
+he accepts new request
+Jacob / Eunice set remote upstream
+pull upstream
+
