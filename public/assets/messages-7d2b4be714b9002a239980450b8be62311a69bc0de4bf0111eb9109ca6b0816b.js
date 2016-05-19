@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".submit").click(function(){PrivatePub.subscribe("/messages/new",function(){$("#chat").append("<%= j render(@message) %>"),$("#new_message")[0].reset()}),location.reload()})});
