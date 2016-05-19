@@ -7,9 +7,12 @@
 <%= form_for Message.new, remote: true do |f| %>
   <%= f.text_field :body %>
   <%= f.hidden_field :user_id, value: current_user.id  %>
-  <%= f.submit "Send" %>
+  <%= f.submit "Send", :class => 'submit btn btn-default' %>
 <% end %>
 
-<% content_for :bottom do  %>
-  <%= subscribe_to "/messages/new" %>
+<%= subscribe_to "/messages/new" %>
+
+<% content_for :scripts do %>
+  <%= javascript_include_tag :messages %>
 <% end %>
+

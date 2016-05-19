@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   get 'video' => 'video#index' 
 
+  get 'members/new' => 'members#new'
+  
+  resources :user_projects
   resources :artifacts
 	resources :tenants do
   	resources :projects do
@@ -34,10 +37,9 @@ Rails.application.routes.draw do
     :passwords => "milia/passwords", 
   }
 
+  resources :messages
   match '/plan/edit' => 'tenants#edit', via: :get, as: :edit_plan
   match '/plan/update' => 'tenants#update', via: [:put, :patch], as: :update_plan
-
-  resources :messages
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
