@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  resources :user_projects
   root :to => "home#index"
 
   get 'tasks' => 'tasks#index'
@@ -10,16 +12,15 @@ Rails.application.routes.draw do
 
   get 'video' => 'video#index' 
 
-  get 'members/new' => 'members#new'
-
   resources :artifacts
 	resources :tenants do
-  	resources :projects
+  	resources :projects do
+  		get 'users', on: :member
+  		put 'add_user', on: :member
+  	end
 	end
   resources :members
   get 'home/index'
-
-
 
   # *MUST* come *BEFORE* devise's definitions (below)
   as :user do   
@@ -27,11 +28,14 @@ Rails.application.routes.draw do
   end
 
   devise_for :users, :controllers => { 
-    :registrations => "milia/registrations",
+    :registrations => "registrations",
     :confirmations => "confirmations",
     :sessions => "milia/sessions", 
     :passwords => "milia/passwords", 
   }
+
+  match '/plan/edit' => 'tenants#edit', via: :get, as: :edit_plan
+  match '/plan/update' => 'tenants#update', via: [:put, :patch], as: :update_plan
 
   resources :messages
 

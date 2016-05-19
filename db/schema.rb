@@ -38,12 +38,20 @@ ActiveRecord::Schema.define(version: 20160518013053) do
   add_index "members", ["tenant_id"], name: "index_members_on_tenant_id", using: :btree
   add_index "members", ["user_id"], name: "index_members_on_user_id", using: :btree
 
+  create_table "payments", force: :cascade do |t|
+    t.string   "email"
+    t.string   "token"
+    t.integer  "tenant_id"
+
   create_table "messages", force: :cascade do |t|
     t.text     "body"
     t.integer  "user_id"
+
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "payments", ["tenant_id"], name: "index_payments_on_tenant_id", using: :btree
 
   add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
 
@@ -98,6 +106,16 @@ ActiveRecord::Schema.define(version: 20160518013053) do
 
   add_index "tenants_users", ["tenant_id", "user_id"], name: "index_tenants_users_on_tenant_id_and_user_id", using: :btree
 
+  create_table "user_projects", force: :cascade do |t|
+    t.integer  "project_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "user_projects", ["project_id"], name: "index_user_projects_on_project_id", using: :btree
+  add_index "user_projects", ["user_id"], name: "index_user_projects_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                        default: "",    null: false
     t.string   "encrypted_password",           default: "",    null: false
@@ -117,6 +135,7 @@ ActiveRecord::Schema.define(version: 20160518013053) do
     t.integer  "tenant_id"
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
+    t.boolean  "is_admin",                     default: false
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
@@ -126,9 +145,12 @@ ActiveRecord::Schema.define(version: 20160518013053) do
   add_foreign_key "artifacts", "projects"
   add_foreign_key "members", "tenants"
   add_foreign_key "members", "users"
+  add_foreign_key "payments", "tenants"
   add_foreign_key "messages", "users"
   add_foreign_key "projects", "tenants"
   add_foreign_key "tasks", "projects"
   add_foreign_key "tasks", "users"
   add_foreign_key "tenants", "tenants"
+  add_foreign_key "user_projects", "projects"
+  add_foreign_key "user_projects", "users"
 end
