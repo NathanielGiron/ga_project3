@@ -24,14 +24,16 @@
 .price-title {
   text-align: center;
   text-decoration: underline;
+  margin-bottom: 10%;
 }
 
 .price {
   border: 1px solid black;
-  
   border-radius: 2px;
-  margin: 0 auto;
-  margin: 5%;
+}
+
+.price:hover {
+  background-color: yellow;
 }
 
 .join-modal {
@@ -42,6 +44,14 @@
 footer {
   text-align: center;
 }
- img {
-  size: 50%;
- }
+ 
+.about{
+  text-align: center;
+  margin-top: 15%;
+  margin-bottom: 25%;
+}
+
+.price-section {
+  margin-bottom: 15%;
+  margin-top: 15%;
+}
