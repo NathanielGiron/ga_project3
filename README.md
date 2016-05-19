@@ -56,7 +56,7 @@
 <p>A smart, creative leader who wants to be able to quickly delegate tasks. They log in to our page, create a new organization, and invite their users. Through the connectivity of video chat plus being able to delegate tasks more quickly, the project is completed in time.</p>
 
 <h5>Worker</h5>
-<p></p>
+<p>  </p>
 
 <h5>Student</h5>
 <p>A group of students working on a project need to assign roles.</p>
