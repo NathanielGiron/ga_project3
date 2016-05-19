@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(version: 20160518235032) do
 
   add_index "artifacts", ["project_id"], name: "index_artifacts_on_project_id", using: :btree
 
+  create_table "conversations", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "members", force: :cascade do |t|
     t.integer  "tenant_id"
     t.integer  "user_id"
