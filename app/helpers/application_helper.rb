@@ -32,8 +32,6 @@ module ApplicationHelper
   	Tenant.find(tenant_id).name
   end
 
-<<<<<<< HEAD
-=======
   def resource_name
   :user
   end
@@ -45,7 +43,7 @@ module ApplicationHelper
   def devise_mapping
    @devise_mapping ||= Devise.mappings[:user]
   end
->>>>>>> 65ee2fe41b748c46412f29afa46f5c24a4df74c3
+  
   def s3_link(tenant_id, artifact_key)
   	link_to artifact_key, "#{artifact_key}", class: "main-link", target: 'new'
   end
