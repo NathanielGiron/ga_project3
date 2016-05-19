@@ -7,6 +7,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.create message_params
     PrivatePub.publish_to "/messages/new", :message => @message
+    redirect_to message_path
   end
 
   private
