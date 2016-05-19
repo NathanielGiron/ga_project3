@@ -55,7 +55,7 @@
     </section>
   </div>
 
-  <div class="container">
+  <div class="container price-section">
     <section class="row">
       <div class="col-md-offset-4 col-md-4 price-title">
         <h2>Pricing</h2>
@@ -72,7 +72,7 @@
         </ul>
         <%= link_to 'start FREE trial', new_user_registration_path(plan: 'free'), class: 'btn btn-info btn-md'  %>
       </div>
-      <div class="col-md-4 price">
+      <div class="col-md-offset-2 col-md-4 price">
         <h3 class="price-title">6.99/Month</h3>
         <ul>
           <li class="info">access to all free tier perks</li>
@@ -87,22 +87,30 @@
 
   <!-- About the Team -->
   <div class="container">
-    <section class="row">
-      <div class="col-md-3">
-        <img src="assets/bryce.jpeg">
-        <p></p>
+    <section class="row about">
+      <div class=" col-md-2">
+        <img src="assets/bryce.jpeg" class="img-responsive img-circle">
+        <p class="price-title"><b>Bryce Bortree</b></p>
+        <p>Bryce worked on the back end and chat systems.</p>
+        <p><a href="https://github.com/brytree">GitHub</a></p>
       </div>
-      <div class="col-md-3">
-        <img src="assets/eunice.jpeg">
-        <p></p>
+      <div class="col-md-offset-1 col-md-2">
+        <img src="assets/eunice.jpeg" class="img-responsive img-circle">
+        <p class="price-title"><b>Eunice Na</b></p>
+        <p>Eunice took on a full stack position and took charge of the video chat.</p>
+        <p><a href="https://github.com/eun-n">GitHub</a></p>
       </div>
-      <div class="col-md-3">
-        <img src="assets/jacob.jpeg">
-        <p></p>
+      <div class="col-md-offset-1 col-md-2">
+        <img src="assets/jacob.jpeg" class="img-responsive img-circle">
+        <p class="price-title"><b>Jacob Barrus</b></p>
+        <p>Jacob made the wireframes and took on a front end roll role.</p>
+        <p><a href="https://github.com/StrongSad">GitHub</a></p>
       </div>
-      <div class="col-md-3">
-        <img src="assets/nat.jpeg">
-        <p></p>
+      <div class="col-md-offset-1 col-md-2">
+        <img src="assets/nat.jpeg" class="img-responsive img-circle">
+        <p class="price-title"><b>Nat Giron</b></p>
+        <p>Nat hooked up file uploads, authentification and payement systems in a full stack position.</p>
+        <p><a href="https://github.com/NathanielGiron">GitHub</a></p>
       </div>
     </section>
   </div>
