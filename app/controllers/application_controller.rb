@@ -8,15 +8,4 @@ class ApplicationController < ActionController::Base
      ##    but you can override these if you wish to handle directly
   rescue_from ::Milia::Control::MaxTenantExceeded, :with => :max_tenants
   rescue_from ::Milia::Control::InvalidTenantAccess, :with => :invalid_tenant
-
-  def is_authenticated?
-    unless current_user
-      flash[:alert] = "Credentials Invalid!!"
-      redirect_to new_user_session_path
-    end
-  end
-
-  def current_user
-    @current_user ||= User.find_by_id(session[:user_id])
-  end
 end
