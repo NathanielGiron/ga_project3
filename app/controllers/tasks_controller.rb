@@ -2,6 +2,10 @@ class TasksController < ApplicationController
   def index
   	@tasks = Task.all
   	@task = Task.new
+    if !@user
+      flash[:alert] = "You must be logged in to view tasks!"
+      redirect_to new_user_session_path
+    end
   end
 
   def create
