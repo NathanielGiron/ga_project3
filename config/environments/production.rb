@@ -4,8 +4,10 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'secure.simple-milia-app.com', :protocol => 'https' }
 
   ActionMailer::Base.delivery_method = :smtp
-
+  puts("This is the username", ENV['SENDGRID_USERNAME'])
+  puts("This is the password", ENV['SENDGRID_PASSWORD'])
   ActionMailer::Base.smtp_settings = {
+
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
