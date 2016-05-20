@@ -28,7 +28,6 @@
 <p>Bootstrap</p>
 <p>Stripe</p>
 
-
 <h4>//Gems:</h4> 
 <p>devise</p>
 <p>faye</p>
@@ -36,11 +35,11 @@
 <p>private_pub</p>
 <p>bcrypt</p>
 
-<p>//Front End Design Tools</p>
+<h4>//Front End Design Tools</h4>
 <p>Sketch</p>
 <p>Bootstrap</p>
 
-<h4>Team Layout</h4>
+<h4>//Team Layout</h4>
 <p>//Jacob git/repo master and front end</p>
 <p>//Bryce project manager/repo master and group chat system</p>
 <p>//Eunice video chat systems and full stack</p> 
