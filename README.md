@@ -5,7 +5,7 @@
 <p> email: brycebortree@gmail.com </p>
 <p> password: password </p>
 
-<h2>Project Ideas</h2>
+<h2>Project Details</h2>
 
 <p>Our application allows project managers, team leads, or anyone who has to work on a group project the ability to create a team, assign tasks, upload files and stay in communication all from one place. We are helping the pm process become faster and more efficient in every aspect. With a centralized group chat you will never lose group communication. With 1 on 1 video chat capabilities checking in with individuals is more natural and straight forward than ever before. </p>
 
