@@ -1,9 +1,6 @@
 <h1># general_assembly_project_3</h1>
 
 <h1><a href="http://sharkfile.herokuapp.com/">beautiful working app here</a></h1>
-<p> login information </p>
-<p> email: brycebortree@gmail.com </p>
-<p> password: password </p>
 
 <h2>Project Details</h2>
 
