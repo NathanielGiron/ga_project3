@@ -9,8 +9,22 @@ ul li:nth-child(odd) {
 
 #chat-box {
   border:1px solid black;
-  width: 50%;
+  width: 510px;
   margin: 0 auto;
   min-height: 500px;
   height: 50%;
+  position: relative;
+}
+
+#bottom-chat {
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+}
+
+
+.submit {
+  position: absolute;
+  bottom: 4px;
+  right: -63px;
 }
