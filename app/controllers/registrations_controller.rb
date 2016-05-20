@@ -40,7 +40,7 @@ def create
         		flash[:error] = e.message
         		@tenant.destroy
         		log_action('Payment failed')
-        		render :new
+        		render :new and return
         	end
         end
       else
@@ -67,7 +67,7 @@ def create
        else
        	resource.valid?
 				log_action( "tenant create failed", @tenant )
-				render :new
+				render :new and return
        end # wrap tenant/user creation in a transaction
 
     end  #  wrap tenant/user creation in a transaction
