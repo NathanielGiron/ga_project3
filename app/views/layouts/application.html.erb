@@ -74,6 +74,9 @@
                 <li><a href="/video">Video</a></li>
                 <li><a href="/tasks">Tasks</a></li>
                 <li><a href="/messages">Chat</a></li>
+                <% if current_user %>
+                  <li><a href="/">Projects</a></li>
+                <% end %>
               </ul>
             </li>
               <% if current_user %>
