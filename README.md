@@ -4,7 +4,7 @@
 
 <p>Our application allows project managers, team leads, or anyone who has to work on a group project the ability to create a team, assign tasks, upload files and stay in communication all from one place. We are helping the pm process become faster and more efficient in every aspect. With a centralized group chat you will never lose group communication. With 1 on 1 video chat capabilities checking in with individuals is more natural and straight forward than ever before. </p>
 
-<h4>//MVP</h4>
+<h4>//MVP (delivered)</h4>
 <p>Create Project</p>
 <p>Build teams on page</p>
 <p>To-do/delegation/Project Management</p>
@@ -65,4 +65,4 @@
 <p> Bryce, Eunice, Jacob and Nat are all in a class together. When it comes time, they are assigned to work together on a group project. They are able to begin utilizing the tasks they've created while creating their own app. </p>
 
 
-<a href="https://docs.google.com/document/d/1K7dgSbUC_kCt4RKOonLzW-A1x-cXAEcNwFTqgonbl90/edit" alt="read more">ReadMore here</a>
+<a href="https://docs.google.com/document/d/1K7dgSbUC_kCt4RKOonLzW-A1x-cXAEcNwFTqgonbl90/edit" alt="read more">Read more here</a>
