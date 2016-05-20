@@ -15,4 +15,10 @@ class User < ActiveRecord::Base
   def is_admin?
   	is_admin
   end
+
+  def create
+    user = User.new
+    user.skip_confirmation!
+    user.save!
+  end
 end
