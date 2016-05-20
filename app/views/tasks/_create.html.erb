@@ -1,10 +1,14 @@
+<!-- page to create tasks -->
 <section id="taskcreate">
 <%= bootstrap_form_for @task do |f| %>
   <%= f.text_field :title %>
   <%= f.text_field :status %>
+  <!-- select a user from a list of all registered users -->
   <div class="field">
       <%= f.select :user_id, User.all.sort.collect { |p| [ p.email, p.id ] } %>
   </div>
+
+  <!-- select a project from a list of all registered projects -->
   <div class="field">
       <%= f.select :project_id, Project.all.sort.collect { |p| [ p.title, p.id ] } %>
   </div>
