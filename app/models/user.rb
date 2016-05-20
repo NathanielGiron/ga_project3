@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :confirmable,
+  devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   acts_as_universal_and_determines_account
@@ -9,8 +9,15 @@ class User < ActiveRecord::Base
   has_many :user_projects
   has_many :projects, through: :user_projects
 
+  #users can have many projects, through their assigned tasks
+  has_many :tasks
+  has_many :projects, through: :tasks
   def is_admin?
   	is_admin
   end
-
+  
+  protected
+  def confirmation_required?
+    false
+  end
 end
