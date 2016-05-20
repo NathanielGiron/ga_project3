@@ -9,8 +9,10 @@ class User < ActiveRecord::Base
   has_many :user_projects
   has_many :projects, through: :user_projects
 
+  #users can have many projects, through their assigned tasks
+  has_many :tasks
+  has_many :projects, through: :tasks
   def is_admin?
   	is_admin
   end
-
 end
