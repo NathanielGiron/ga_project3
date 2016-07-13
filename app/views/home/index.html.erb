@@ -1,49 +1,168 @@
-<% if current_user %>
-<h3 class="pull-right">Organization: <%= @tenant.name %></h3>
-<%= render 'projects/list' %>
+
+<% if current_user  %>
+  <%= render 'projects/list' %>
 <% else %>
-<div class="jumbotron">
-	<h2>Welcome to the Project Management Application!</h2>
-	<p class="lead">
-		You'll love managing your project with our SaaS application. Please take a look at our great plans
-	</p>
-</div>
-	<div class="row">
-		<div class="plans clearfix">
-			<div class="col-lg-3 col-lg-offset-3 plan">
-			<h2>Free Plan</h2>
-			<div class="price pull-right">
-				Price: Free
-			</div>
-			<div class="features">
-				<ul>
-					<li>Unlimited file uploads</li>
-					<li>Responsive design</li>
-					<li>Access anywhere</li>
-					<li>1 project</li>
-				</ul>
-			</div>
-			<p>
-			<%= link_to 'Sign Up', new_user_registration_path(plan: 'free'), class: 'btn btn-primary sign-up' %>
-			</p>
-			</div>
-			<div class="col-lg-3 plan">
-				<h2>Premium Plan</h2>
-				<div class="price pull-right">
-					Price: $10
-				</div>
-				<div class="features">
-					<ul>
-						<li>Unlimited file uploads</li>
-						<li>Responsive design</li>
-						<li>Access anywhere</li>
-						<li class='extra'>Unlimited projects</li>
-					</ul>
-				</div>
-				<p>
-				<%= link_to 'Sign Up', new_user_registration_path(plan: 'premium'), class: 'btn btn-primary sign-up' %>
-				</p>
-			</div>
-		</div>
-	</div>
+  <div class="jumbotron" id="overview">
+    <div class="container" >
+      <section class="row">
+        <div class="col-md-offset-4 col-md-4">
+          <img class="img-responsive shark" src="assets/shark-logo-trans.png">
+          <!-- <img class="img-responsive shark" src="http://www.decalsmania.com/FitxersWeb/104804/WHITE_SHARK_FOTOLLISTAT_portada.png"> -->
+          <!-- <img class="img-responsive shark" src="assets/proj-man."> -->
+        </div>
+      </section>
+      <section class="row offer">
+        <div class="col-md-offset-1 col-md-4">
+          <h2>Shark File: What we have to offer</h2> 
+          <ul>
+            <li class="info">Synchronize team projects with ease</li>
+            <li class="info">Instantaneous file sharing and group communication</li>
+            <li class="info">Text and video chat systems to keep communication simple</li>
+            <li class="info">Assignment allocation services</li>
+          </ul>
+        </div>
+        <div class="col-md-offset-2 col-md-4" >
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="http://cdn.images.express.co.uk/img/dynamic/78/590x/Great-White-shark-Evans-Head-595103.jpg" alt="Chania">
+              </div>
+
+              <div class="item">
+                <img src="http://www.sharksavers.org/files/9814/5031/2990/M-OMalley-Great-White-0230.jpg" alt="Chania">
+              </div>
+
+              <div class="item">
+                <img src="https://www.daysoftheyear.com/wp-content/images/shark-awareness-day1-e1434363530655-808x382.jpg" alt="Flower">
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="price-back">
+    <div class="container price-section">
+      <section class="row">
+        <div class="col-md-offset-4 col-md-4 price-title">
+          <h2>Pricing</h2>
+        </div>
+      </section>
+      <section class="row">
+        <div class="col-md-offset-1 col-md-4 price">
+          <div class="plans">
+            <div class="plan-header">
+              <h3 class="price-header">Free plan</h3>
+            </div>
+            <div class="plan-price">
+              <h1 class="price-header"><sup style="font-weight:300; font-size:20pt;">$</sup><span style="font-weight:bold; font-size:40pt;">0.00</span> <span style="font-weight:300; font-size:15pt;">per month</span></h1>
+            </div>
+            <table class="table table-striped" style="text-align:center;">
+
+              <tr>
+                <td>Unlimted file uploads</td>
+              </tr>
+              <tr>
+                <td>Personalized task allocation</td>
+              </tr>
+              <tr>
+                <td>Centralized group chat</td>
+              </tr>
+              <tr>
+                <td>Three projects</td>
+              </tr>
+            </table>
+            <center><%= link_to 'Start FREE trial', new_user_registration_path(plan: 'free'), class: 'btn btn-info btn-md'  %></center>
+          </div>
+        </div>
+        <div class="col-md-offset-2 col-md-4 price">
+          <div class="plans">
+            <div class="plan-header">
+              <h3 class="price-header">Premium plan</h3>
+            </div>
+            <div class="plan-price">
+              <h1 class="price-header"><sup style="font-weight:300; font-size:20pt;">$</sup><span style="font-weight:bold; font-size:40pt;">6.99</span> <span style="font-weight:300; font-size:15pt;">per month</span></h1>
+            </div>
+            <table class="table table-striped" style="text-align:center;">
+
+              <tr>
+                <td>Access to all free teir perks!</td>
+              </tr>
+              <tr>
+                <td>1:1 video chat</td>
+              </tr>
+              <tr>
+                <td>Unlimited projects</td>
+              </tr>
+              <tr>
+                <td>And much more to come</td>
+              </tr>
+            </table>
+            <center><%= link_to 'Create a premium account', new_user_registration_path(plan: 'premium'), class: 'btn btn-info btn-md'  %></center>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- About the Team -->
+  <div id="about-section">
+    <div class="container">
+      <section class="row">
+        <div class="col-md-12">
+          <h2 id="about-team-header">The Team</h2>
+        </div>
+      </section>
+      <section class="row about">
+        <div class=" col-md-2 person">
+          <img src="assets/bryce.jpeg" class="img-responsive img-circle">
+          <p class="price-title"><b>Bryce Bortree</b></p>
+          <p>Bryce worked on the back end and chat systems.</p>
+          <p><a href="https://github.com/brytree">GitHub</a></p>
+        </div>
+        <div class="col-md-offset-1 col-md-2 person">
+          <img src="assets/eunice.jpeg" class="img-responsive img-circle">
+          <p class="price-title"><b>Eunice Na</b></p>
+          <p>Eunice took on a full stack position and took charge of the video chat.</p>
+          <p><a href="https://github.com/eun-n">GitHub</a></p>
+        </div>
+        <div class="col-md-offset-1 col-md-2 person">
+          <img src="assets/jacob.jpeg" class="img-responsive img-circle">
+          <p class="price-title"><b>Jacob Barrus</b></p>
+          <p>Jacob made the wireframes and took on a front end role.</p>
+          <p><a href="https://github.com/StrongSad">GitHub</a></p>
+        </div>
+        <div class="col-md-offset-1 col-md-2 person">
+          <img src="assets/nat.jpeg" class="img-responsive img-circle">
+          <p class="price-title"><b>Nat Giron</b></p>
+          <p>Nat hooked up file uploads, authentification and payement systems in a full stack position.</p>
+          <p><a href="https://github.com/NathanielGiron">GitHub</a></p>
+        </div>
+      </section>
+    </div>
+  </div>
 <% end %>
+
+
+
+
+
