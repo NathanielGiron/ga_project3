@@ -1,0 +1,16 @@
+ul li {
+  list-style: none;
+  background: whitesmoke;
+}
+
+ul li:nth-child(odd) {
+  background: white; 
+}
+
+#chat-box {
+  border:1px solid black;
+  width: 50%;
+  margin: 0 auto;
+  min-height: 500px;
+  height: 50%;
+}

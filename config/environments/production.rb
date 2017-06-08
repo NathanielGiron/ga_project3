@@ -1,11 +1,13 @@
 Rails.application.configure do
-   
+    
   # devise says to define default url
   config.action_mailer.default_url_options = { :host => 'secure.simple-milia-app.com', :protocol => 'https' }
 
   ActionMailer::Base.delivery_method = :smtp
-
+  puts("This is the username", ENV['SENDGRID_USERNAME'])
+  puts("This is the password", ENV['SENDGRID_PASSWORD'])
   ActionMailer::Base.smtp_settings = {
+
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
@@ -25,7 +27,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => 'nats-saas-app.herokuapp.com', :protocol => 'https'}
+  config.action_mailer.default_url_options = { :host => 'sharkfiler.herokuapp.com', :protocol => 'https'}
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
@@ -93,4 +95,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.serve_static_assets = true
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+  config.assets.compile = true
 end
